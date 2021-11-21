@@ -16,6 +16,7 @@
         </a-asset>
         <!-- Sphere wireframe -->
         <a-sphere
+            id="yellowsphere"
             color="yellow"
             radius="0.5"
             position="1 1.5 -3"
@@ -23,6 +24,7 @@
         ></a-sphere>
         <!-- Box biasa -->
         <a-box
+            id="greenbox"
             color="#358e7a"
             position="-1 1.5 -3"
             rotation=" 0 45 15"
@@ -30,6 +32,7 @@
         ></a-box>
         <!-- Box with texture -->
         <a-box
+            id="brickbox"
             src="#base"
             repeat="2 2"
             normal-map="#normal"
@@ -38,11 +41,55 @@
         ></a-box>
         <!-- Sphere with texture -->
         <a-sphere
+            id="bricksphere"
             src="#base"
             radius="0.5"
             position="3 1.5 -3"
-        ></a-sphere>
+        ></a-sphere>i
+        <!-- Box for walls -->
+        <a-box
+            color="#000000"
+            position="-5 1.5 -8"
+            scale="0.5 9 20"
+        ></a-box>
+        <a-box
+            color="#000000"ssss
+            position="2 1.5 -10"
+            scale="0.5 9 20"
+            rotation="0 90 0"
+        ></a-box>
+        <a-box
+            color="#000000"
+            position="2 -2.5 -10"
+            scale="0.5 100 100"
+            rotation="0 0 90"
+        ></a-box>
 
+        <!-- lights -->
+        <a-light
+            type="ambient"
+            color="#ffffff"
+            intensity="0.6"
+        ></a-light>
+        <a-light
+            type="point"
+            intensity="1"
+            position="0 1.5 0"
+        ></a-light>
+        <a-light
+            type="directional"
+            position="5 1.5 0"
+            intensity="1"
+            angle="30"
+            target=""
+        ></a-light>
+        <a-light
+            type="spot"
+            position="-3s 0 0"
+            intensity="1"
+            penumbra="0.2"
+            target="#brickabox"
+        ></a-light>
     </a-scene>
 </body>
 </html>
