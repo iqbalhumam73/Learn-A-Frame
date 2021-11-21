@@ -16,14 +16,42 @@
         </a-asset>
 
         <!-- Sphere wireframe -->
-        <a-sphere id="yellowsphere" color="yellow" radius="0.5" position="1 1.5 -3" wireframe="1"></a-sphere>
+        <a-sphere id="yellowsphere" color="yellow" radius="0.5" position="1 1.5 -3" wireframe="1"
+            animation="
+                property: position;
+                from: 1 0.25 -3;
+                to: 1 4 -3;
+                dur: 500;
+                loop: true;
+                dir: alternate;
+                easing: easeOutCubic;
+            "
+            animation__rotation="
+                property: rotation;
+                to: 100 200 150;
+                dur: 10000;
+                loop: true;
+            "
+            animation__scale="
+                property: scale;
+                from: 2.0 2.0 2.0;
+                to: 0.5 0.5 0.5;
+                dur: 1000;
+                loop: true;
+                dir: alternate;
+            "
+        ></a-sphere>
+
         <!-- Box biasa -->
         <a-box id="greenbox" color="#358e7a"  position="-1 1.5 -3"  rotation=" 0 45 15"  scale="1 2 1"  ></a-box>
         <!-- <a-box id="greenbox" color="#358e7a" position="-1 1.5 -3" rotation="0 45 14.999999999999998" scale="1 2 1" material="color: #00e6b4; vertexColors: vertex; emissive: #000000; height: 255.23; metalness: 0.44; metalnessTextureOffset: 5.32 6.74; normalScale: 9.1 1; roughnessTextureOffset: 1.82 0" geometry="" visible=""></a-box> -->
+        
         <!-- Box with texture -->
         <a-box id="brickbox" src="#base" repeat="2 2" normal-map="#normal" normal-texture-repeat="2 2" position="-3 1.5 -3"></a-box>
+        
         <!-- Sphere with texture -->
         <a-sphere id="bricksphere" src="#base" radius="0.5" position="3 1.5 -3"></a-sphere>
+        
         <!-- Cone with Entity -->
         <a-entity geometry="primitive: cone" material="color: #0080c0" position="0 1.5 -6" scale="1 2 1"></a-entity>
 
